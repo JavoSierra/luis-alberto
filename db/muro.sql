@@ -53,3 +53,8 @@ $$;
 
 -- La función solo la puede usar el servidor (clave secreta), no el público
 revoke execute on function public.reportar_publicacion(uuid, text) from public, anon, authenticated;
+
+-- Refuerzo (5/10/2026): además de RLS sin políticas, se le quitan al público (anon/authenticated)
+-- todos los permisos sobre las tablas, también para tablas futuras. El servidor usa la clave secreta.
+revoke all on table public.publicaciones, public.reportes from anon, authenticated;
+alter default privileges in schema public revoke all on tables from anon, authenticated;

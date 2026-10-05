@@ -2,7 +2,7 @@
 // Cada persona (IP hasheada) cuenta una sola vez por publicación.
 // Con 3 reportes, la publicación se oculta hasta que el dueño la revise en Supabase.
 
-import { baseDeDatos, hashIp, ipDe, muroActivo } from "@/lib/muro/servidor";
+import { baseDeDatos, desdeLaPagina, hashIp, ipDe, muroActivo } from "@/lib/muro/servidor";
 
 export const dynamic = "force-dynamic";
 
@@ -10,6 +10,7 @@ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export async function POST(request: Request) {
   if (!muroActivo()) return Response.json({ error: "El muro todavía no está activo." }, { status: 503 });
+  if (!desdeLaPagina(request)) return Response.json({ error: "Pedido no permitido." }, { status: 403 });
 
   let id: unknown;
   try {

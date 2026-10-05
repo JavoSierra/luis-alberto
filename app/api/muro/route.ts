@@ -2,7 +2,7 @@
 // GET  → publicaciones aprobadas y vigentes (lo que ve todo el mundo)
 // POST → nueva publicación (entra "pendiente" hasta que el dueño la apruebe)
 
-import { baseDeDatos, hashIp, ipDe, muroActivo } from "@/lib/muro/servidor";
+import { baseDeDatos, desdeLaPagina, hashIp, ipDe, muroActivo } from "@/lib/muro/servidor";
 import { dominio, limpiarComentario, MAX_COMENTARIO, urlValida, type Publicacion } from "@/lib/muro/validar";
 
 export const dynamic = "force-dynamic";
@@ -10,6 +10,8 @@ export const dynamic = "force-dynamic";
 const LIMITE_POR_HORA = 3;
 const LIMITE_POR_DIA = 10;
 const REPORTES_PARA_OCULTAR = 3;
+const MAX_PENDIENTES = 200;
+const MAX_CUERPO = 2_000; // bytes: un link + comentario nunca ocupan más
 const CAMPOS = "id, url, dominio, comentario, creado";
 
 function json(datos: unknown, estado = 200, cacheSegundos = 0) {
@@ -43,10 +45,15 @@ export async function GET() {
 
 export async function POST(request: Request) {
   if (!muroActivo()) return json({ error: "El muro todavía no está activo." }, 503);
+  if (!desdeLaPagina(request)) return json({ error: "Pedido no permitido." }, 403);
 
   let cuerpo: { url?: unknown; comentario?: unknown; sitio?: unknown };
   try {
-    cuerpo = await request.json();
+    // Se rechazan pedidos gigantes antes de leerlos
+    const texto = await request.text();
+    if (texto.length > MAX_CUERPO) return json({ error: "Pedido inválido." }, 413);
+    cuerpo = JSON.parse(texto);
+    if (typeof cuerpo !== "object" || cuerpo === null) throw new Error("no es un objeto");
   } catch {
     return json({ error: "Pedido inválido." }, 400);
   }
@@ -67,6 +74,20 @@ export async function POST(request: Request) {
 
   const db = baseDeDatos();
   const ipHash = hashIp(ipDe(request));
+
+  // Freno general contra ataques de spam desde muchas conexiones: si ya hay demasiadas
+  // publicaciones esperando revisión, no se aceptan nuevas hasta que el dueño revise.
+  const { count: pendientes, error: errorPendientes } = await db
+    .from("publicaciones")
+    .select("id", { count: "exact", head: true })
+    .eq("estado", "pendiente");
+  if (errorPendientes) {
+    console.error("Muro: error al contar pendientes", errorPendientes);
+    return json({ error: "No pudimos guardar tu oferta. Probá de nuevo en un rato." }, 500);
+  }
+  if ((pendientes ?? 0) >= MAX_PENDIENTES) {
+    return json({ error: "Hay muchas ofertas esperando revisión. Probá de nuevo más tarde." }, 503);
+  }
 
   // Límite de envíos por persona (IP hasheada)
   const haceUnDia = new Date(Date.now() - 86_400_000).toISOString();
