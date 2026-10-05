@@ -105,7 +105,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 - [x] Recursos y Sobre el proyecto (5/10/2026)
 - [x] Sección Compartir (explicación + botón al chat del hero) (5/10/2026)
 - [ ] Deploy en Vercel y prueba en celular — publicada el 5/10/2026 en https://luisalberto.vercel.app (Vercel conectado a GitHub `JavoSierra/luis-alberto`: cada push a `main` publica solo). Falta la prueba en celular del dueño.
-- [ ] Muro real de Compartir con Supabase y moderación (vive en el chat del hero)
+- [x] Muro real de Compartir con Supabase y moderación (vive en el chat del hero) (5/10/2026)
 
 ## Decisiones y pendientes
 - Vercel Analytics agregado en `app/layout.tsx` y activado en el panel (plan Hobby, gratis). Proyecto de Vercel: `luisalberto` (cuenta javiersierra09, entra con Google). Guía para publicar: `docs/GUIA_PUBLICAR.md`.
