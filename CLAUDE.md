@@ -101,7 +101,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 
 ## Estado
 - [x] Base y estilo: header, hero, ¿Por qué existe?, footer (5/10/2026)
-- [ ] Empleos: fuentes, región, filtros, tarjetas, guardados
+- [x] Empleos: fuentes, región, filtros, tarjetas, guardados (5/10/2026)
 - [ ] Recursos y Sobre el proyecto
 - [ ] Sección Compartir (explicación + botón al chat del hero)
 - [ ] Deploy en Vercel y prueba en celular
@@ -109,7 +109,11 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 
 ## Decisiones y pendientes
 - Pendiente del dueño: nombre a mostrar, nivel de inglés, links de LinkedIn y GitHub, foto o avatar, imágenes decorativas, clave de Jooble.
-- Pendiente de verificar: filtro por país en Get on Board (el parámetro `country_code` no está documentado y devolvió ofertas remotas); cobertura de Argentina en Jooble.
+- Pendiente de verificar: cobertura de Argentina en Jooble.
+- Get on Board (5/10/2026): no hay filtro por país documentado. Se traen las 100 ofertas más recientes de cada categoría (`/categories/{id}/jobs` con `expand` de empresa, ubicación y jornada) y la región se calcula con `remote_modality`, `location_tenants`, `location_regions` y `location_cities`. "fully_remote" = "100% remoto desde cualquier país" (verificado en la página de un aviso) → Global. "remote_local" sin países indicados → Otras.
+- Criterio de región aplicado (lib/empleos/region.ts): remoto solo para Argentina → Argentina; remoto que incluye Argentina o toda LATAM (aunque sume otras regiones) → LATAM; remoto restringido a otros países (aunque sean de LATAM, ej. solo México) → Otras, porque desde Argentina no se puede aplicar; presencial/híbrido en otro país de LATAM → LATAM.
+- "Solo remoto LATAM" y "Solo remoto global" filtran además por modalidad Remoto (las presenciales en Chile, por ejemplo, aparecen en la opción por defecto).
+- Caché de empleos: `app/api/empleos/route.ts` con `revalidate = 21600` (6 h) y copia en memoria. Ofertas de más de 30 días se descartan. Duplicados = mismo puesto + misma empresa.
 - Verificado 5/10/2026: Jobicy tiene `geo=latam` y `geo=argentina`. Himalayas `country=Argentina` mezcla ofertas globales: la región se calcula nosotros.
 - Decidido 5/10/2026: arrancar con Jobicy, Himalayas y Get on Board. Remotive queda afuera (sus condiciones prohíben redistribuir a agregadores). Jooble en pausa: necesita clave por país (ar.jooble.org) y el plan gratis da 500 consultas en total.
 - Proyecto movido fuera de OneDrive a `C:\Users\Javo\Proyectos\LuisAlberto`. Next.js 16 + Tailwind 4 + TypeScript. Colores en `app/globals.css` (@theme).
