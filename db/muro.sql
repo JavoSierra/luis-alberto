@@ -1,5 +1,6 @@
 -- Base de datos del muro de Compartir (Supabase).
 -- Se pega una sola vez en Supabase → SQL Editor → Run.
+-- (Creado el 5/10/2026. El editor "Query" de Vercel acepta una sola instrucción: ahí se corrió todo junto dentro de un bloque "do $bloque$ begin ... end $bloque$;")
 --
 -- Seguridad: las tablas tienen RLS activado y NINGUNA política.
 -- Eso significa que con la clave pública nadie puede leer ni escribir nada.
