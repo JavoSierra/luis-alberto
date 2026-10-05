@@ -5,7 +5,7 @@ import { Avatar } from "./Dibujos";
 
 export default function ChatBienvenida() {
   return (
-    <div className="relative z-[1] mx-auto max-w-[400px] overflow-hidden rounded-[22px] bg-white shadow-chat">
+    <div id="chat" className="relative z-[1] mx-auto max-w-[400px] overflow-hidden rounded-[22px] bg-white shadow-chat">
       <div className="flex items-center gap-3 border-b border-borde px-4 py-3.5">
         <Avatar tamano={40} />
         <div>

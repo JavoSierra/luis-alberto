@@ -103,7 +103,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 - [x] Base y estilo: header, hero, ¿Por qué existe?, footer (5/10/2026)
 - [x] Empleos: fuentes, región, filtros, tarjetas, guardados (5/10/2026)
 - [x] Recursos y Sobre el proyecto (5/10/2026)
-- [ ] Sección Compartir (explicación + botón al chat del hero)
+- [x] Sección Compartir (explicación + botón al chat del hero) (5/10/2026)
 - [ ] Deploy en Vercel y prueba en celular
 - [ ] Muro real de Compartir con Supabase y moderación (vive en el chat del hero)
 
