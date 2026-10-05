@@ -102,7 +102,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 ## Estado
 - [x] Base y estilo: header, hero, ¿Por qué existe?, footer (5/10/2026)
 - [x] Empleos: fuentes, región, filtros, tarjetas, guardados (5/10/2026)
-- [ ] Recursos y Sobre el proyecto
+- [x] Recursos y Sobre el proyecto (5/10/2026)
 - [ ] Sección Compartir (explicación + botón al chat del hero)
 - [ ] Deploy en Vercel y prueba en celular
 - [ ] Muro real de Compartir con Supabase y moderación (vive en el chat del hero)
@@ -118,6 +118,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 - Decidido 5/10/2026: arrancar con Jobicy, Himalayas y Get on Board. Remotive queda afuera (sus condiciones prohíben redistribuir a agregadores). Jooble en pausa: necesita clave por país (ar.jooble.org) y el plan gratis da 500 consultas en total.
 - Proyecto movido fuera de OneDrive a `C:\Users\Javo\Proyectos\LuisAlberto`. Next.js 16 + Tailwind 4 + TypeScript. Colores en `app/globals.css` (@theme).
 - Decidido 5/10/2026: el muro real se hace en el orden previsto (después del deploy), con revisión previa de cada publicación.
-- Los links del menú apuntan a secciones provisorias (`components/SeccionPendiente.tsx`) que se reemplazan a medida que se construyen.
+- Recursos (5/10/2026): links verificados uno por uno. El de Canva del prototipo daba 404 → reemplazado por `/es_ar/crear/curriculum-vitae/`. Se sumaron Grow with Google y Microsoft Learn. British Council no respondió desde acá: quedó afuera. Cómo editar: `data/LEEME.md`.
+- LinkedIn y GitHub: completar en `lib/config.ts` (REDES). Mientras estén vacíos, los botones no aparecen.
 - Imágenes pendientes en `/public/images`: avatar/foto, plantas, taza, libros (hoy son dibujos SVG en `components/Dibujos.tsx`).
 - [Claude Code actualiza esta sección al final de cada sesión]

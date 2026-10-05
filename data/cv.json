@@ -1,0 +1,9 @@
+{
+  "titulo": "Herramientas para tu CV",
+  "descripcion": "Plantillas, guías y consejos para destacar tu perfil.",
+  "boton": "Ver herramientas",
+  "links": [
+    { "nombre": "Canva", "url": "https://www.canva.com/es_ar/crear/curriculum-vitae/", "detalle": "Plantillas de CV editables" },
+    { "nombre": "Europass", "url": "https://europass.europa.eu/es", "detalle": "Armador de CV paso a paso" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "titulo": "Inglés para entrevistas",
+  "descripcion": "Frases, tips y recursos para sentirte más preparado.",
+  "boton": "Ver recursos",
+  "links": [
+    { "nombre": "BBC Learning English", "url": "https://www.bbc.co.uk/learningenglish/", "detalle": "Lecciones cortas con audio" },
+    { "nombre": "Duolingo", "url": "https://es.duolingo.com/", "detalle": "Práctica diaria en el celular" }
+  ]
+}

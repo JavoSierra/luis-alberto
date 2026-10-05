@@ -44,6 +44,19 @@ export function Hojas() {
   );
 }
 
+/** Pila de libros con frases, al lado de Recursos. */
+export function PilaLibros() {
+  const libro =
+    "rounded-[3px_6px_6px_3px] border-r-[10px] border-[#f3f0e6] px-3 py-[7px] text-[.82rem] font-bold text-verde-oscuro shadow-[0_2px_3px_rgba(31,61,43,.12)]";
+  return (
+    <div className="flex w-[180px] -rotate-[4deg] flex-col gap-[3px]">
+      <span className={`${libro} bg-salvia`}>Mejor CV</span>
+      <span className={`${libro} ml-2.5 bg-[#bcd3bf]`}>Más entrevistas</span>
+      <span className={`${libro} -ml-1 bg-[#98b79e]`}>Nuevas oportunidades</span>
+    </div>
+  );
+}
+
 /** Taza con texto, al lado del chat. Solo en pantallas grandes (desde 1024px). */
 export function Taza() {
   return (
