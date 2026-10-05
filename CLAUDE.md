@@ -109,7 +109,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 
 ## Decisiones y pendientes
 - Vercel Analytics agregado en `app/layout.tsx` (falta activarlo en el panel de Vercel). Guía para publicar: `docs/GUIA_PUBLICAR.md`.
-- Pendiente del dueño: cuenta de GitHub y de Vercel (para publicar), cuenta de Supabase (para el muro), nombre a mostrar, nivel de inglés, link de GitHub, imágenes decorativas, clave de Jooble.
+- Pendiente del dueño: cuenta de GitHub y de Vercel (para publicar), cuenta de Supabase (para el muro), nombre a mostrar, nivel de inglés, imágenes decorativas, clave de Jooble.
 - Pendiente de verificar: cobertura de Argentina en Jooble.
 - Get on Board (5/10/2026): no hay filtro por país documentado. Se traen las 100 ofertas más recientes de cada categoría (`/categories/{id}/jobs` con `expand` de empresa, ubicación y jornada) y la región se calcula con `remote_modality`, `location_tenants`, `location_regions` y `location_cities`. "fully_remote" = "100% remoto desde cualquier país" (verificado en la página de un aviso) → Global. "remote_local" sin países indicados → Otras.
 - Criterio de región aplicado (lib/empleos/region.ts): remoto solo para Argentina → Argentina; remoto que incluye Argentina o toda LATAM (aunque sume otras regiones) → LATAM; remoto restringido a otros países (aunque sean de LATAM, ej. solo México) → Otras, porque desde Argentina no se puede aplicar; presencial/híbrido en otro país de LATAM → LATAM.

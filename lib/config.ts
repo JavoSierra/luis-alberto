@@ -16,5 +16,5 @@ export const SITIO = {
 
 export const REDES = {
   linkedin: "https://www.linkedin.com/in/javiersierra09/",
-  github: "", // Pendiente: pegar acá el link de tu perfil de GitHub
+  github: "https://github.com/JavoSierra",
 };
