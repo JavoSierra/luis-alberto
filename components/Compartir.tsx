@@ -3,7 +3,7 @@
 
 import Nota from "./Nota";
 
-export default function Compartir() {
+export default function Compartir({ muroActivo }: { muroActivo: boolean }) {
   return (
     <section id="compartir" className="bg-verde-claro py-11">
       <div className="wrap grid grid-cols-1 items-center gap-10 min-[861px]:grid-cols-[1fr_1.1fr]">
@@ -52,7 +52,9 @@ export default function Compartir() {
             <a className="btn btn-verde" href="#chat">
               Ir al chat para compartir <span aria-hidden="true">↑</span>
             </a>
-            <span className="rounded-full bg-aviso-bg px-2.5 py-1 text-[.72rem] font-bold text-aviso-tx">Próximamente</span>
+            {!muroActivo && (
+              <span className="rounded-full bg-aviso-bg px-2.5 py-1 text-[.72rem] font-bold text-aviso-tx">Próximamente</span>
+            )}
           </div>
         </div>
       </div>
