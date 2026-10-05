@@ -28,10 +28,10 @@ Cercano y argento (voseo), como un amigo que te ayuda a buscar laburo. Diseño p
 
 ## Secciones (en este orden)
 1. **Header fijo:** logo; menú Empleos, Compartir, Recursos, Sobre (scroll suave); botón verde "Un mejor futuro" que abre un menú con: Mis ofertas guardadas (con contador), Compartir una oferta, Mejorar mi CV.
-2. **Hero:** como en el prototipo. El chat estilo WhatsApp muestra los mensajes fijos de bienvenida; su campo "Pegá una oferta..." envía al muro de Compartir. Mientras el muro real no exista, el campo va deshabilitado con un cartel "Próximamente".
+2. **Hero:** como en el prototipo. **El chat estilo WhatsApp ES el muro de Compartir** (decisión del dueño, 5/10/2026): arriba los mensajes fijos de bienvenida y debajo las publicaciones aprobadas; su campo "Pegá una oferta..." publica ahí mismo. Mientras el muro real no exista, el campo va deshabilitado con un cartel "Próximamente".
 3. **¿Por qué existe?**
 4. **Oportunidades para vos** (empleos, ver más abajo).
-5. **Oportunidades que se comparten** (muro, ver más abajo).
+5. **Oportunidades que se comparten:** solo explicación y reglas (texto del prototipo) con un botón que sube al chat del hero. No hay un segundo muro acá.
 6. **Recursos gratuitos:** tres tarjetas que despliegan su lista de links. Links en archivos JSON dentro de `/data`, fáciles de editar. Verificar que cada link funcione antes de publicarlo.
 7. **Sobre el proyecto:** texto del prototipo (historia real del autor). Foto o avatar, botones LinkedIn y GitHub con los links como variables a completar; si falta un link, no mostrar ese botón.
 8. **Footer.**
@@ -78,7 +78,7 @@ Los empleos presenciales de Argentina fuera de tecnología casi no existen en AP
 - Mostrar 8 ofertas y botón "Ver más oportunidades". Estados de carga (esqueletos) y de "sin resultados".
 
 ## Muro de Compartir
-Es un muro de links con estética de chat, NO un chat libre. Alguien que ve una búsqueda que le puede servir a otra persona pega el link y queda visible para todos.
+Vive en el chat del hero (no en una sección aparte). Es un muro de links con estética de chat, NO un chat libre. Alguien que ve una búsqueda que le puede servir a otra persona pega el link y queda visible para todos.
 - Cada publicación: una URL `https` + comentario opcional de hasta 120 caracteres. Nada más.
 - Mostrar bien visible el dominio del link (ej. "linkedin.com").
 - Moderación: toda publicación entra como `pendiente` y solo se muestra cuando el dueño la marca `aprobada` (al principio, desde el panel de Supabase).
@@ -88,7 +88,7 @@ Es un muro de links con estética de chat, NO un chat libre. Alguien que ve una 
 - Vencimiento automático a los 30 días.
 - Aviso fijo: "Nunca pagues para postularte. Si una oferta te pide plata, es una estafa."
 - Deseable: al pegar el link, traer título e imagen de la página desde el servidor (vista previa).
-- El hero muestra las últimas publicaciones aprobadas debajo de los mensajes de bienvenida.
+- El chat del hero muestra las publicaciones aprobadas debajo de los mensajes de bienvenida. Quien publica ve su mensaje "En revisión" hasta que se aprueba.
 
 ## Reglas
 - No inventar endpoints ni datos. Si algo no funciona o hay dudas, avisar.
@@ -103,9 +103,9 @@ Es un muro de links con estética de chat, NO un chat libre. Alguien que ve una 
 - [x] Base y estilo: header, hero, ¿Por qué existe?, footer (5/10/2026)
 - [ ] Empleos: fuentes, región, filtros, tarjetas, guardados
 - [ ] Recursos y Sobre el proyecto
-- [ ] Sección Compartir (visual, con "Próximamente")
+- [ ] Sección Compartir (explicación + botón al chat del hero)
 - [ ] Deploy en Vercel y prueba en celular
-- [ ] Muro real de Compartir con Supabase y moderación
+- [ ] Muro real de Compartir con Supabase y moderación (vive en el chat del hero)
 
 ## Decisiones y pendientes
 - Pendiente del dueño: nombre a mostrar, nivel de inglés, links de LinkedIn y GitHub, foto o avatar, imágenes decorativas, clave de Jooble.
@@ -113,6 +113,7 @@ Es un muro de links con estética de chat, NO un chat libre. Alguien que ve una 
 - Verificado 5/10/2026: Jobicy tiene `geo=latam` y `geo=argentina`. Himalayas `country=Argentina` mezcla ofertas globales: la región se calcula nosotros.
 - Decidido 5/10/2026: arrancar con Jobicy, Himalayas y Get on Board. Remotive queda afuera (sus condiciones prohíben redistribuir a agregadores). Jooble en pausa: necesita clave por país (ar.jooble.org) y el plan gratis da 500 consultas en total.
 - Proyecto movido fuera de OneDrive a `C:\Users\Javo\Proyectos\LuisAlberto`. Next.js 16 + Tailwind 4 + TypeScript. Colores en `app/globals.css` (@theme).
+- Decidido 5/10/2026: el muro real se hace en el orden previsto (después del deploy), con revisión previa de cada publicación.
 - Los links del menú apuntan a secciones provisorias (`components/SeccionPendiente.tsx`) que se reemplazan a medida que se construyen.
 - Imágenes pendientes en `/public/images`: avatar/foto, plantas, taza, libros (hoy son dibujos SVG en `components/Dibujos.tsx`).
 - [Claude Code actualiza esta sección al final de cada sesión]
