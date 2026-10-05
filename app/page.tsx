@@ -9,16 +9,19 @@ import PorQue from "@/components/PorQue";
 import Recursos from "@/components/recursos/Recursos";
 import Sobre from "@/components/Sobre";
 import Toast from "@/components/Toast";
+import { muroActivo } from "@/lib/muro/servidor";
 
 export default function Inicio() {
+  // ¿Está conectada la base de datos del muro? (se decide en el servidor, sin mostrar claves)
+  const activo = muroActivo();
   return (
     <>
       <Header />
       <main id="inicio">
-        <Hero />
+        <Hero muroActivo={activo} />
         <PorQue />
         <Empleos />
-        <Compartir />
+        <Compartir muroActivo={activo} />
         <Recursos />
         <Sobre />
       </main>

@@ -1,10 +1,10 @@
-// Hero: título, texto, botones y el chat de bienvenida.
+// Hero: título, texto, botones y el chat, que es el muro de Compartir.
 
 import ChatBienvenida from "./ChatBienvenida";
 import { Hojas, Taza } from "./Dibujos";
 import Nota from "./Nota";
 
-export default function Hero() {
+export default function Hero({ muroActivo }: { muroActivo: boolean }) {
   return (
     <div
       className="relative overflow-hidden"
@@ -52,7 +52,7 @@ export default function Hero() {
           >
             Buenas oportunidades también se comparten.
           </Nota>
-          <ChatBienvenida />
+          <ChatBienvenida activo={muroActivo} />
           <Taza />
         </div>
       </div>
