@@ -1,0 +1,16 @@
+Leé CLAUDE.md y abrí docs/prototipo.html. Quiero construir la página
+"Luis Alberto" como proyecto Next.js, replicando ese prototipo.
+
+No soy programador: explicame todo en simple y guiame paso a paso cuando
+tenga que hacer algo yo.
+
+Antes de escribir código:
+1. Revisá que mi compu tenga lo necesario (Node.js, Git) y decime qué falta.
+2. Verificá las fuentes de empleo de CLAUDE.md contra su documentación
+   actual y contame qué encontraste.
+3. Mostrame el plan, la estructura de carpetas y la lista de componentes.
+Esperá mi confirmación.
+
+Después trabajá sección por sección en el orden de "Estado" de CLAUDE.md.
+Al terminar cada una, mostrámela corriendo en local (npm run dev) antes de
+seguir, hacé un commit y actualizá "Estado" en CLAUDE.md.
