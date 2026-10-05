@@ -14,3 +14,5 @@ Antes de publicar, abrí el link en el navegador para confirmar que funciona.
 Links verificados el 5/10/2026. El de Canva del prototipo (`/es_ar/curriculum-vitae/`) daba error 404 y se reemplazó.
 
 Buscador (5/10/2026): cada dirección de búsqueda se probó en el navegador (Claseflix usa `/buscar?s=`; su vieja dirección claseflix.com redirige a claseflix.io).
+
+CV (5/10/2026): HarvCV (pedido del dueño) verificado en el navegador (bloquea a robots con un control de Vercel, pero abre bien para las personas). Jobscan, Teal, FlowCV y Resume Worded verificados: todos declaran plan gratis en su página.

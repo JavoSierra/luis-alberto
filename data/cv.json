@@ -3,6 +3,11 @@
   "descripcion": "Plantillas, guías y consejos para destacar tu perfil.",
   "links": [
     {
+      "nombre": "HarvCV",
+      "url": "https://harvcv.com/#es",
+      "detalle": "CV estilo Harvard compatible con ATS, en español (plan gratis)"
+    },
+    {
       "nombre": "Canva",
       "url": "https://www.canva.com/es_ar/crear/curriculum-vitae/",
       "detalle": "Plantillas de CV editables"
@@ -11,6 +16,26 @@
       "nombre": "Europass",
       "url": "https://europass.europa.eu/es",
       "detalle": "Armador de CV paso a paso"
+    },
+    {
+      "nombre": "FlowCV",
+      "url": "https://flowcv.com/",
+      "detalle": "Armador de CV gratis, con descargas ilimitadas"
+    },
+    {
+      "nombre": "Jobscan",
+      "url": "https://www.jobscan.co/",
+      "detalle": "Compara tu CV con una oferta y te dice qué ajustar (algunas revisiones gratis, en inglés)"
+    },
+    {
+      "nombre": "Teal",
+      "url": "https://www.tealhq.com/",
+      "detalle": "Adapta tu CV a cada oferta (plan gratis, en inglés)"
+    },
+    {
+      "nombre": "Resume Worded",
+      "url": "https://resumeworded.com/",
+      "detalle": "Puntaje y consejos para mejorar tu CV (gratis, en inglés)"
     }
   ]
 }
