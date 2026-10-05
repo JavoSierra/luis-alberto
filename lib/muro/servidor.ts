@@ -41,3 +41,17 @@ export function hashIp(ip: string): string {
   const secreto = variables()?.clave ?? "sin-clave";
   return createHmac("sha256", secreto).update(`muro:${ip}`).digest("hex");
 }
+
+/**
+ * Solo se aceptan publicaciones enviadas desde la propia página.
+ * Evita que otro sitio use los navegadores de sus visitantes para llenar el muro de spam.
+ */
+export function desdeLaPagina(request: Request): boolean {
+  const origen = request.headers.get("origin");
+  if (!origen) return false;
+  try {
+    return new URL(origen).host === new URL(request.url).host;
+  } catch {
+    return false;
+  }
+}
