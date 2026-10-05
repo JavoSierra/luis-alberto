@@ -28,7 +28,12 @@ export default function Compartir({ muroActivo }: { muroActivo: boolean }) {
               </li>
             ))}
           </ul>
-          <Nota className="mt-[26px]">Así entre todos nos ayudamos.</Nota>
+          {/* Frase elegida por el dueño (5/10/2026): el karma laboral, en tono de chiste */}
+          <Nota trazo="largo" className="mt-[26px]">
+            Hoy compartís vos, mañana te comparten a vos.
+            <br />
+            Es karma, no falla.
+          </Nota>
         </div>
 
         {/* Tarjeta que lleva al chat del hero */}
