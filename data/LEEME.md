@@ -6,7 +6,8 @@ Cada archivo es una tarjeta de la sección Recursos:
 - `ingles.json` → Inglés para entrevistas
 - `cv.json` → Herramientas para tu CV
 - `catalogo-cursos.json` → los cursos que muestra el buscador "¿Qué querés aprender hoy?". Cada curso tiene `titulo`, `url`, `plataforma`, `autor`, `tipo`, `imagen` (solo YouTube), `tema` (los botones de temas salen de acá) y `palabras` (sinónimos para encontrarlo, en minúscula y sin tildes).
-- `portales.json` → los portales de empleo de "¿Querés buscar en más lugares?" (sección Empleos), en dos grupos: Argentina y Remoto y LATAM.
+- `portales.json` → "¿Querés buscar en más lugares?" (sección Empleos): `grupos[0]` = Argentina, `grupos[1]` = Remoto, `ia` = plataformas de entrenamiento de IA (con su aviso).
+- `portales-paises.json` → los portales de los demás países del selector.
 - `buscador.json` → los sitios de los atajos "¿Querés más? Buscá en…". En cada `url`, `{q}` se reemplaza por lo que escribió la persona.
 
 Para sumar un link, copiá una línea de `links` y cambiá `nombre`, `url` y `detalle`.
@@ -22,3 +23,5 @@ CV (5/10/2026): HarvCV (pedido del dueño) verificado en el navegador (bloquea a
 Catálogo de cursos (5/10/2026): 56 cursos, 4 por tema. Cada link de YouTube verificado con oEmbed; los demás abren y coinciden con el curso. Claseflix y Capacítate piden cuenta gratis.
 
 Portales de empleo (5/10/2026): los 11 verificados en el navegador (Bumeran y ZonaJobs muestran ~9.300 avisos en Argentina; Indeed y Glassdoor bloquean robots pero abren bien para personas — Glassdoor no se sumó). InfoJobs no se usa: no opera en Argentina.
+
+Portales por país e IA (5/10/2026): todo verificado en el navegador. Quedaron afuera portales oficiales que no abren desde fuera de su país (Vía Trabajo UY, empleo.gob.bo, Empleos Perú, Encuentra Empleo EC, Busco Empleo CR, Empléate ES). Indeed España muestra un control anti-robots pero es el sitio oficial.

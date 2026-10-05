@@ -1,0 +1,329 @@
+{
+  "paises": [
+    {
+      "pais": "Uruguay",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://uy.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "BuscoJobs",
+          "url": "https://www.buscojobs.com.uy/",
+          "detalle": "Portal uruguayo con ofertas de todo rubro"
+        },
+        {
+          "nombre": "Gallito Trabajo",
+          "url": "https://trabajo.gallito.com.uy/",
+          "detalle": "Avisos de empleo del clasificado Gallito"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    },
+    {
+      "pais": "Chile",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://cl.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "Laborum",
+          "url": "https://www.laborum.cl/",
+          "detalle": "Ofertas de empresas de todo Chile"
+        },
+        {
+          "nombre": "Trabajando.com",
+          "url": "https://www.trabajando.cl/",
+          "detalle": "Portal chileno con empleos en todo el país"
+        },
+        {
+          "nombre": "Chiletrabajos",
+          "url": "https://www.chiletrabajos.cl/",
+          "detalle": "Bolsa de trabajo chilena, de todo rubro"
+        },
+        {
+          "nombre": "Indeed Chile",
+          "url": "https://cl.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        },
+        {
+          "nombre": "Bolsa Nacional de Empleo",
+          "url": "https://www.bne.cl/",
+          "detalle": "Portal oficial y gratuito del Estado"
+        }
+      ]
+    },
+    {
+      "pais": "Paraguay",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://py.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "BuscoJobs",
+          "url": "https://www.buscojobs.com.py/",
+          "detalle": "Ofertas de trabajo en Paraguay"
+        },
+        {
+          "nombre": "Clasipar Empleos",
+          "url": "https://clasipar.paraguay.com/categorias/empleos",
+          "detalle": "Avisos clasificados de empleo"
+        },
+        {
+          "nombre": "Emplea PY (MTESS)",
+          "url": "https://emplea.mtess.gov.py/",
+          "detalle": "Portal oficial del Ministerio de Trabajo"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    },
+    {
+      "pais": "Bolivia",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://bo.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "Trabajito",
+          "url": "https://www.trabajito.com.bo/",
+          "detalle": "Bolsa de trabajo boliviana, postulación gratis"
+        },
+        {
+          "nombre": "Trabajópolis",
+          "url": "https://www.trabajopolis.bo/",
+          "detalle": "Portal de empleo boliviano"
+        },
+        {
+          "nombre": "BuscoJobs",
+          "url": "https://www.buscojobs.com.bo/",
+          "detalle": "Ofertas de trabajo en Bolivia"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    },
+    {
+      "pais": "Perú",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://pe.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "Bumeran",
+          "url": "https://www.bumeran.com.pe/",
+          "detalle": "Ofertas de empresas de todo el Perú"
+        },
+        {
+          "nombre": "Indeed Perú",
+          "url": "https://pe.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    },
+    {
+      "pais": "Ecuador",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://ec.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "Multitrabajos",
+          "url": "https://www.multitrabajos.com/",
+          "detalle": "Ofertas de empresas de todo Ecuador"
+        },
+        {
+          "nombre": "Indeed Ecuador",
+          "url": "https://ec.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    },
+    {
+      "pais": "Colombia",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://co.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "elempleo.com",
+          "url": "https://www.elempleo.com/co/",
+          "detalle": "Portal colombiano con vacantes de todo rubro"
+        },
+        {
+          "nombre": "Magneto",
+          "url": "https://www.magneto365.com/co",
+          "detalle": "Ofertas de empleo en toda Colombia"
+        },
+        {
+          "nombre": "Indeed Colombia",
+          "url": "https://co.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        },
+        {
+          "nombre": "Servicio Público de Empleo",
+          "url": "https://www.serviciodeempleo.gov.co/",
+          "detalle": "Servicio oficial y gratuito del Estado"
+        }
+      ]
+    },
+    {
+      "pais": "Venezuela",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://ve.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "Bumeran",
+          "url": "https://www.bumeran.com.ve/",
+          "detalle": "Ofertas de empresas en Venezuela"
+        },
+        {
+          "nombre": "Empléate",
+          "url": "https://www.empleate.com/venezuela/",
+          "detalle": "Bolsa de empleo venezolana"
+        },
+        {
+          "nombre": "Indeed Venezuela",
+          "url": "https://ve.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    },
+    {
+      "pais": "México",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://mx.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "OCC Mundial",
+          "url": "https://www.occ.com.mx/",
+          "detalle": "Bolsa de trabajo mexicana muy usada"
+        },
+        {
+          "nombre": "Bumeran",
+          "url": "https://www.bumeran.com.mx/",
+          "detalle": "Ofertas de empresas en México"
+        },
+        {
+          "nombre": "Indeed México",
+          "url": "https://mx.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        },
+        {
+          "nombre": "Portal del Empleo",
+          "url": "https://www.empleo.gob.mx/",
+          "detalle": "Portal oficial y gratuito del Gobierno"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    },
+    {
+      "pais": "Costa Rica",
+      "portales": [
+        {
+          "nombre": "Computrabajo",
+          "url": "https://cr.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "BuscoJobs",
+          "url": "https://www.buscojobs.cr/",
+          "detalle": "Ofertas de trabajo en Costa Rica"
+        },
+        {
+          "nombre": "Tecoloco",
+          "url": "https://www.tecoloco.co.cr/",
+          "detalle": "Portal de empleo de Centroamérica"
+        },
+        {
+          "nombre": "Empleos.net",
+          "url": "https://empleos.net/",
+          "detalle": "Bolsa regional, incluye Costa Rica"
+        },
+        {
+          "nombre": "Indeed Costa Rica",
+          "url": "https://cr.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        }
+      ]
+    },
+    {
+      "pais": "España",
+      "portales": [
+        {
+          "nombre": "InfoJobs",
+          "url": "https://www.infojobs.net/",
+          "detalle": "El portal de empleo más usado en España"
+        },
+        {
+          "nombre": "Infoempleo",
+          "url": "https://www.infoempleo.com/",
+          "detalle": "Ofertas de trabajo en toda España"
+        },
+        {
+          "nombre": "Indeed España",
+          "url": "https://es.indeed.com/",
+          "detalle": "Buscador que reúne ofertas de muchos sitios"
+        },
+        {
+          "nombre": "SEPE",
+          "url": "https://www.sepe.es/HomeSepe",
+          "detalle": "Servicio Público de Empleo Estatal"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Red profesional, empleos calificados"
+        }
+      ]
+    }
+  ]
+}

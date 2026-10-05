@@ -3,23 +3,113 @@
     {
       "titulo": "Argentina",
       "portales": [
-        { "nombre": "Computrabajo", "url": "https://ar.computrabajo.com/", "detalle": "De todo tipo, en todo el país" },
-        { "nombre": "Bumeran", "url": "https://www.bumeran.com.ar/", "detalle": "Empresas grandes y pymes" },
-        { "nombre": "ZonaJobs", "url": "https://www.zonajobs.com.ar/", "detalle": "Ventas, administración, oficios y más" },
-        { "nombre": "Indeed", "url": "https://ar.indeed.com/", "detalle": "Junta ofertas de muchos sitios" },
-        { "nombre": "LinkedIn Empleos", "url": "https://www.linkedin.com/jobs/", "detalle": "Ideal con tu perfil actualizado" },
-        { "nombre": "Portal Empleo", "url": "https://portalempleo.gob.ar/", "detalle": "Del Gobierno: trabajo y capacitaciones" }
+        {
+          "nombre": "Computrabajo",
+          "url": "https://ar.computrabajo.com/",
+          "detalle": "De todo tipo, en todo el país"
+        },
+        {
+          "nombre": "Bumeran",
+          "url": "https://www.bumeran.com.ar/",
+          "detalle": "Empresas grandes y pymes"
+        },
+        {
+          "nombre": "ZonaJobs",
+          "url": "https://www.zonajobs.com.ar/",
+          "detalle": "Ventas, administración, oficios y más"
+        },
+        {
+          "nombre": "Indeed",
+          "url": "https://ar.indeed.com/",
+          "detalle": "Junta ofertas de muchos sitios"
+        },
+        {
+          "nombre": "LinkedIn Empleos",
+          "url": "https://www.linkedin.com/jobs/",
+          "detalle": "Ideal con tu perfil actualizado"
+        },
+        {
+          "nombre": "Portal Empleo",
+          "url": "https://portalempleo.gob.ar/",
+          "detalle": "Del Gobierno: trabajo y capacitaciones"
+        }
       ]
     },
     {
-      "titulo": "Remoto y LATAM",
+      "titulo": "Remoto, desde cualquier país",
       "portales": [
-        { "nombre": "Get on Board", "url": "https://www.getonbrd.com/", "detalle": "Tecnología y digital en Latinoamérica" },
-        { "nombre": "Workana", "url": "https://www.workana.com/", "detalle": "Proyectos freelance desde casa" },
-        { "nombre": "Torre", "url": "https://torre.ai/", "detalle": "Empleos remotos para LATAM" },
-        { "nombre": "Himalayas", "url": "https://himalayas.app/", "detalle": "Remotos de todo el mundo" },
-        { "nombre": "Jobicy", "url": "https://jobicy.com/", "detalle": "Remotos, con filtro por región" }
+        {
+          "nombre": "Get on Board",
+          "url": "https://www.getonbrd.com/",
+          "detalle": "Tecnología y digital en Latinoamérica"
+        },
+        {
+          "nombre": "Workana",
+          "url": "https://www.workana.com/",
+          "detalle": "Proyectos freelance desde casa"
+        },
+        {
+          "nombre": "Torre",
+          "url": "https://torre.ai/",
+          "detalle": "Empleos remotos para LATAM"
+        },
+        {
+          "nombre": "Himalayas",
+          "url": "https://himalayas.app/",
+          "detalle": "Remotos de todo el mundo"
+        },
+        {
+          "nombre": "Jobicy",
+          "url": "https://jobicy.com/",
+          "detalle": "Remotos, con filtro por región"
+        }
       ]
     }
-  ]
+  ],
+  "ia": {
+    "titulo": "Entrenamiento de IA (trabajo por tarea)",
+    "aviso": "Son trabajos freelance y remotos: el volumen de tareas varía, muchos piden inglés y una prueba de ingreso, y la disponibilidad depende del país. Nunca pagues para entrar: si alguien te pide plata en nombre de estas empresas, es una estafa.",
+    "portales": [
+      {
+        "nombre": "Outlier",
+        "url": "https://outlier.ai/",
+        "detalle": "Entrenar IA como freelancer"
+      },
+      {
+        "nombre": "DataAnnotation",
+        "url": "https://www.dataannotation.tech/",
+        "detalle": "Tareas de entrenamiento de IA desde casa"
+      },
+      {
+        "nombre": "Alignerr",
+        "url": "https://www.alignerr.com/",
+        "detalle": "Entrenar modelos de IA en tus horarios"
+      },
+      {
+        "nombre": "micro1",
+        "url": "https://www.micro1.ai/experts/opportunities",
+        "detalle": "Trabajos remotos de entrenamiento de IA"
+      },
+      {
+        "nombre": "CrowdGen (Appen)",
+        "url": "https://crowdgen.com/",
+        "detalle": "Proyectos de datos e IA para colaboradores"
+      },
+      {
+        "nombre": "Turing",
+        "url": "https://www.turing.com/jobs",
+        "detalle": "Remotos con empresas de EE.UU. e IA"
+      },
+      {
+        "nombre": "Mercor",
+        "url": "https://work.mercor.com/",
+        "detalle": "Te conecta con proyectos remotos de IA"
+      },
+      {
+        "nombre": "Prolific",
+        "url": "https://www.prolific.com/participants",
+        "detalle": "Estudios y tareas pagas (con lista de espera)"
+      }
+    ]
+  }
 }
