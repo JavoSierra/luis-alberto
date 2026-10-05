@@ -35,10 +35,11 @@ export default function Hero({ muroActivo }: { muroActivo: boolean }) {
               Ver recursos
             </a>
           </div>
+          {/* Frase elegida por el dueño (5/10/2026): tiene que verse ni bien se entra a la página */}
           <Nota trazo="largo" className="mt-[34px] ml-6 lg:ml-[110px]">
-            La misma búsqueda,
+            Hoy compartís vos, mañana te comparten a vos.
             <br />
-            más personas, más oportunidades.
+            Es karma, no falla.
           </Nota>
         </div>
 
