@@ -4,7 +4,7 @@
 import Image from "next/image";
 import foto from "@/public/images/foto.webp";
 
-/** Foto de Javier (public/images/foto.webp), recortada en círculo. Se usa en el chat del hero y en "Sobre". */
+/** Foto de Javier (public/images/foto.webp), recortada en círculo. Solo en "Sobre el proyecto". */
 export function Avatar({ tamano = 40, etiqueta }: { tamano?: number; etiqueta?: string }) {
   return (
     <span

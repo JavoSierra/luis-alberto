@@ -9,7 +9,6 @@
 import { useEffect, useRef, useState } from "react";
 import { avisar } from "@/components/Toast";
 import { dominio, MAX_COMENTARIO, separarMensaje, urlValida, type Publicacion } from "@/lib/muro/validar";
-import { Avatar } from "./Dibujos";
 
 const CLAVE_PROPIAS = "la-muro-propias";
 const CLAVE_REPORTADAS = "la-muro-reportadas";
@@ -151,7 +150,13 @@ export default function ChatBienvenida({ activo }: { activo: boolean }) {
   return (
     <div id="chat" className="relative z-[1] mx-auto max-w-[400px] overflow-hidden rounded-[22px] bg-white shadow-chat">
       <div className="flex items-center gap-3 border-b border-borde px-4 py-3.5">
-        <Avatar tamano={40} />
+        {/* Logo de la página (no una foto): "Luis Alberto" es el nombre del papá de Javier, no una persona del chat */}
+        <span
+          aria-hidden="true"
+          className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-verde text-[.95rem] font-extrabold tracking-[-.02em] text-white"
+        >
+          LA
+        </span>
         <div>
           <b className="block text-[.98rem] leading-[1.2]">Luis Alberto</b>
           <small className="flex items-center gap-[5px] text-[.78rem] text-gris">
