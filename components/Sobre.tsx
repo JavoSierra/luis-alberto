@@ -29,8 +29,7 @@ export default function Sobre() {
           <h2 className="text-[clamp(1.6rem,4vw,2rem)] font-extrabold">Sobre el proyecto</h2>
         </div>
         <div className="grid grid-cols-1 items-center gap-6 min-[861px]:grid-cols-[auto_1fr_auto]">
-          {/* Pendiente: reemplazar el avatar dibujado por una foto o ilustración real */}
-          <Avatar tamano={88} etiqueta="Avatar" />
+          <Avatar tamano={88} etiqueta="Foto de Javier Sierra" />
           <div className="flex min-w-0 flex-col gap-2.5 text-[.95rem] text-gris">
             <p className="max-w-[60ch]">
               Hola, soy quien está detrás de Luis Alberto. Trabajé 9 años en un banco y un día decidí irme a vivir

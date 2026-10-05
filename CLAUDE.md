@@ -109,7 +109,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 
 ## Decisiones y pendientes
 - Vercel Analytics agregado en `app/layout.tsx` (falta activarlo en el panel de Vercel). Guía para publicar: `docs/GUIA_PUBLICAR.md`.
-- Pendiente del dueño: cuenta de GitHub y de Vercel (para publicar), cuenta de Supabase (para el muro), nombre a mostrar, nivel de inglés, links de LinkedIn y GitHub, foto o avatar, imágenes decorativas, clave de Jooble.
+- Pendiente del dueño: cuenta de GitHub y de Vercel (para publicar), cuenta de Supabase (para el muro), nombre a mostrar, nivel de inglés, link de GitHub, imágenes decorativas, clave de Jooble.
 - Pendiente de verificar: cobertura de Argentina en Jooble.
 - Get on Board (5/10/2026): no hay filtro por país documentado. Se traen las 100 ofertas más recientes de cada categoría (`/categories/{id}/jobs` con `expand` de empresa, ubicación y jornada) y la región se calcula con `remote_modality`, `location_tenants`, `location_regions` y `location_cities`. "fully_remote" = "100% remoto desde cualquier país" (verificado en la página de un aviso) → Global. "remote_local" sin países indicados → Otras.
 - Criterio de región aplicado (lib/empleos/region.ts): remoto solo para Argentina → Argentina; remoto que incluye Argentina o toda LATAM (aunque sume otras regiones) → LATAM; remoto restringido a otros países (aunque sean de LATAM, ej. solo México) → Otras, porque desde Argentina no se puede aplicar; presencial/híbrido en otro país de LATAM → LATAM.
@@ -121,5 +121,6 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 - Decidido 5/10/2026: el muro real se hace en el orden previsto (después del deploy), con revisión previa de cada publicación.
 - Recursos (5/10/2026): links verificados uno por uno. El de Canva del prototipo daba 404 → reemplazado por `/es_ar/crear/curriculum-vitae/`. Se sumaron Grow with Google y Microsoft Learn. British Council no respondió desde acá: quedó afuera. Cómo editar: `data/LEEME.md`.
 - LinkedIn y GitHub: completar en `lib/config.ts` (REDES). Mientras estén vacíos, los botones no aparecen.
-- Imágenes pendientes en `/public/images`: avatar/foto, plantas, taza, libros (hoy son dibujos SVG en `components/Dibujos.tsx`).
+- Foto del autor en `public/images/foto.webp` (5/10/2026): se usa en el chat del hero y en Sobre. LinkedIn cargado en `lib/config.ts`.
+- Imágenes pendientes en `/public/images`: plantas, taza, libros (hoy son dibujos SVG en `components/Dibujos.tsx`).
 - [Claude Code actualiza esta sección al final de cada sesión]

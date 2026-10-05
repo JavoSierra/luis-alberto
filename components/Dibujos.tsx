@@ -1,24 +1,26 @@
-// Dibujos provisorios del prototipo (avatar, hojas, taza).
+// Imágenes de la página: la foto del autor y los dibujos provisorios del prototipo (hojas, taza, libros).
 // Cuando haya imágenes reales en /public/images, se reemplazan acá.
 
-/** Avatar dibujado. Pendiente: reemplazar por foto o ilustración real. */
+import Image from "next/image";
+import foto from "@/public/images/foto.webp";
+
+/** Foto de Javier (public/images/foto.webp), recortada en círculo. Se usa en el chat del hero y en "Sobre". */
 export function Avatar({ tamano = 40, etiqueta }: { tamano?: number; etiqueta?: string }) {
   return (
-    <svg
-      className="flex-none rounded-full bg-verde-suave"
-      width={tamano}
-      height={tamano}
-      viewBox="0 0 40 40"
-      role={etiqueta ? "img" : undefined}
-      aria-label={etiqueta}
-      aria-hidden={etiqueta ? undefined : true}
+    <span
+      className="relative block flex-none overflow-hidden rounded-full bg-verde-suave"
+      style={{ width: tamano, height: tamano }}
     >
-      <circle cx="20" cy="20" r="20" fill="#dfeee2" />
-      <circle cx="20" cy="16" r="8" fill="#e8b996" />
-      <path d="M11.5 15c0-7 17-7 17 0-2-3-15-3-17 0z" fill="#3a2a20" />
-      <path d="M13 18c0 9 14 9 14 0-1 3-13 3-14 0z" fill="#3a2a20" />
-      <path d="M6 40c0-10 28-10 28 0z" fill="#3f7a54" />
-    </svg>
+      <Image
+        src={foto}
+        alt={etiqueta ?? ""}
+        width={tamano}
+        height={tamano}
+        sizes={`${tamano}px`}
+        // La foto ya viene en círculo con un borde gris: se agranda apenas para que el borde no se vea
+        className="h-full w-full scale-[1.06] object-cover"
+      />
+    </span>
   );
 }
 
