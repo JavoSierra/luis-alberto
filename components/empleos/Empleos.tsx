@@ -8,6 +8,7 @@ import { alternarGuardado, EVENTO_VER_GUARDADOS, useGuardados } from "@/lib/guar
 import type { Oferta, RespuestaEmpleos } from "@/lib/empleos/tipos";
 import Esqueleto from "./Esqueleto";
 import Filtros, { type ValoresFiltros } from "./Filtros";
+import PortalesEmpleo from "./PortalesEmpleo";
 import TarjetaEmpleo from "./TarjetaEmpleo";
 
 const POR_TANDA = 8;
@@ -137,6 +138,8 @@ export default function Empleos() {
           <a href="https://jobicy.com" target="_blank" rel="noopener noreferrer" className="underline">Jobicy</a>.
           Cada botón te lleva a la publicación original.
         </p>
+
+        <PortalesEmpleo />
       </div>
     </section>
   );

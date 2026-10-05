@@ -1,0 +1,25 @@
+{
+  "grupos": [
+    {
+      "titulo": "Argentina",
+      "portales": [
+        { "nombre": "Computrabajo", "url": "https://ar.computrabajo.com/", "detalle": "De todo tipo, en todo el país" },
+        { "nombre": "Bumeran", "url": "https://www.bumeran.com.ar/", "detalle": "Empresas grandes y pymes" },
+        { "nombre": "ZonaJobs", "url": "https://www.zonajobs.com.ar/", "detalle": "Ventas, administración, oficios y más" },
+        { "nombre": "Indeed", "url": "https://ar.indeed.com/", "detalle": "Junta ofertas de muchos sitios" },
+        { "nombre": "LinkedIn Empleos", "url": "https://www.linkedin.com/jobs/", "detalle": "Ideal con tu perfil actualizado" },
+        { "nombre": "Portal Empleo", "url": "https://portalempleo.gob.ar/", "detalle": "Del Gobierno: trabajo y capacitaciones" }
+      ]
+    },
+    {
+      "titulo": "Remoto y LATAM",
+      "portales": [
+        { "nombre": "Get on Board", "url": "https://www.getonbrd.com/", "detalle": "Tecnología y digital en Latinoamérica" },
+        { "nombre": "Workana", "url": "https://www.workana.com/", "detalle": "Proyectos freelance desde casa" },
+        { "nombre": "Torre", "url": "https://torre.ai/", "detalle": "Empleos remotos para LATAM" },
+        { "nombre": "Himalayas", "url": "https://himalayas.app/", "detalle": "Remotos de todo el mundo" },
+        { "nombre": "Jobicy", "url": "https://jobicy.com/", "detalle": "Remotos, con filtro por región" }
+      ]
+    }
+  ]
+}
