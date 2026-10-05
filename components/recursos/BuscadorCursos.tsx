@@ -1,94 +1,143 @@
 "use client";
 
-// Buscador de cursos: la persona escribe qué quiere aprender y le damos links directos
-// a esa búsqueda en plataformas gratuitas (YouTube, Claseflix, etc.).
-// No usa ninguna clave ni API: solo arma los links. Las plataformas se editan en data/buscador.json.
+// Buscador de cursos gratis "estilo Google", pero adentro de la página:
+// - Mientras la persona escribe, aparecen los cursos del catálogo (data/catalogo-cursos.json).
+// - Entiende palabras sin tilde, a medio escribir y sinónimos ("planillas" → Excel).
+// - Debajo, atajos para seguir buscando el mismo tema en YouTube, Claseflix, etc. (data/buscador.json).
+// No usa claves ni APIs externas.
 
-import { useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import datos from "@/data/buscador.json";
+import { buscarCursos, cursosDelTema, destacados, TEMAS } from "@/lib/cursos";
+import TarjetaCurso from "./TarjetaCurso";
+
+const POR_PAGINA = 6;
 
 export default function BuscadorCursos() {
   const [texto, setTexto] = useState("");
-  const [buscado, setBuscado] = useState("");
+  const [tema, setTema] = useState<string | null>(null);
+  const [mostrar, setMostrar] = useState(POR_PAGINA);
+  // Para que escribir se sienta fluido aunque la lista tarde un instante en actualizarse
+  const consulta = useDeferredValue(texto.trim());
 
-  function buscar(palabra: string) {
-    const limpio = palabra.trim().slice(0, 80);
-    setTexto(limpio);
-    setBuscado(limpio);
+  const resultados = useMemo(() => {
+    if (consulta.length >= 2) return buscarCursos(consulta);
+    if (tema) return cursosDelTema(tema);
+    return destacados();
+  }, [consulta, tema]);
+
+  const buscando = consulta.length >= 2;
+  const termino = buscando ? consulta : tema ?? "";
+
+  function elegirTema(t: string) {
+    setTexto("");
+    setTema((actual) => (actual === t ? null : t));
+    setMostrar(POR_PAGINA);
   }
 
-  return (
-    <div className="mb-4 rounded-tarjeta bg-verde-claro p-5 min-[561px]:p-6">
-      <h3 className="text-[1.15rem] font-bold">¿Qué querés aprender?</h3>
-      <p className="mt-1 text-[.9rem] text-gris">
-        Escribí un tema y te llevamos a cursos gratis en YouTube, Claseflix y otras plataformas.
-      </p>
+  let titulo = "Para empezar";
+  if (buscando) titulo = resultados.length ? `Cursos sobre “${consulta}”` : `No tenemos cursos de “${consulta}” en la lista`;
+  else if (tema) titulo = tema;
 
-      <form
-        role="search"
-        onSubmit={(e) => {
-          e.preventDefault();
-          buscar(texto);
-        }}
-        className="mt-4 flex flex-col gap-2.5 min-[481px]:flex-row"
-      >
+  return (
+    <div className="mb-4 rounded-[22px] bg-verde-claro p-5 min-[561px]:p-7">
+      <h3 className="text-[clamp(1.2rem,3vw,1.45rem)] font-extrabold tracking-[-.02em]">¿Qué querés aprender hoy?</h3>
+      <p className="mt-1 text-[.92rem] text-gris">Cursos gratis y en español, elegidos para tu búsqueda laboral.</p>
+
+      {/* Caja de búsqueda */}
+      <form role="search" onSubmit={(e) => e.preventDefault()} className="relative mt-4">
+        <svg
+          className="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-gris-claro"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
         <input
           type="search"
           value={texto}
-          onChange={(e) => setTexto(e.target.value)}
+          onChange={(e) => {
+            setTexto(e.target.value);
+            setMostrar(POR_PAGINA);
+          }}
           maxLength={80}
-          placeholder="Ej: Excel, inglés, atención al cliente..."
-          aria-label="Tema que querés aprender"
-          className="campo min-w-0 flex-1"
+          placeholder="Probá con Excel, inglés, ventas, programación..."
+          aria-label="Buscá un curso gratis"
+          className="w-full rounded-full border border-borde bg-white py-3.5 pr-5 pl-12 text-[1rem] shadow-suave outline-none focus:border-salvia focus:ring-4 focus:ring-salvia/30"
         />
-        <button type="submit" className="btn btn-verde justify-center" disabled={!texto.trim()}>
-          Buscar cursos
-        </button>
       </form>
 
-      {/* Ideas para arrancar */}
-      <div className="mt-3 flex flex-wrap items-center gap-2">
-        <span className="text-[.8rem] text-gris">Ideas:</span>
-        {datos.sugerencias.map((s) => (
-          <button
-            key={s}
-            type="button"
-            onClick={() => buscar(s)}
-            className="cursor-pointer rounded-full border border-borde bg-white px-3 py-1 text-[.8rem] font-semibold text-verde-oscuro hover:border-salvia"
-          >
-            {s}
-          </button>
-        ))}
+      {/* Temas para tocar */}
+      <div className="mt-3.5 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] min-[761px]:flex-wrap min-[761px]:overflow-visible">
+        {TEMAS.map((t) => {
+          const activo = !buscando && tema === t;
+          return (
+            <button
+              key={t}
+              type="button"
+              aria-pressed={activo}
+              onClick={() => elegirTema(t)}
+              className={`flex-none cursor-pointer rounded-full border px-3.5 py-1.5 text-[.82rem] font-semibold whitespace-nowrap transition-colors ${
+                activo
+                  ? "border-verde bg-verde text-white"
+                  : "border-borde bg-white text-verde-oscuro hover:border-salvia"
+              }`}
+            >
+              {t}
+            </button>
+          );
+        })}
       </div>
 
-      {buscado && (
-        <div className="mt-5" aria-live="polite">
-          <p className="mb-2.5 text-[.9rem] font-semibold">
-            Cursos gratis de “{buscado}” en:
-          </p>
-          <ul className="grid grid-cols-1 gap-2.5 min-[561px]:grid-cols-2 min-[1001px]:grid-cols-3">
-            {datos.plataformas.map((p) => (
-              <li key={p.nombre}>
-                <a
-                  href={p.url.replace("{q}", encodeURIComponent(buscado))}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between gap-3 rounded-xl border border-borde bg-white px-4 py-3 no-underline hover:border-salvia"
-                >
-                  <span className="min-w-0">
-                    <b className="block text-[.92rem] text-verde-oscuro">{p.nombre}</b>
-                    <span className="block text-[.78rem] text-gris-claro">{p.detalle}</span>
-                  </span>
-                  <span aria-hidden="true" className="flex-none text-verde">
-                    ↗
-                  </span>
-                  <span className="sr-only"> (se abre en otra pestaña)</span>
-                </a>
-              </li>
+      {/* Resultados */}
+      <div className="mt-6" aria-live="polite">
+        <p className="mb-3 text-[.95rem] font-bold">{titulo}</p>
+
+        {resultados.length > 0 && (
+          <div className="grid grid-cols-1 gap-3.5 min-[481px]:grid-cols-2 min-[901px]:grid-cols-3">
+            {resultados.slice(0, mostrar).map((c) => (
+              <TarjetaCurso key={c.url} curso={c} />
             ))}
-          </ul>
-        </div>
-      )}
+          </div>
+        )}
+
+        {resultados.length > mostrar && (
+          <button
+            type="button"
+            onClick={() => setMostrar((m) => m + POR_PAGINA)}
+            className="mt-4 cursor-pointer text-[.92rem] font-bold text-verde"
+          >
+            Ver más cursos →
+          </button>
+        )}
+
+        {/* Atajos a otros sitios con el mismo tema */}
+        {termino && (
+          <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-borde pt-4">
+            <span className="text-[.85rem] text-gris">
+              {resultados.length ? "¿Querés más? Buscá" : "Buscalo en"} “{termino}” en:
+            </span>
+            {datos.plataformas.map((p) => (
+              <a
+                key={p.nombre}
+                href={p.url.replace("{q}", encodeURIComponent(termino))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-borde bg-white px-3 py-1 text-[.8rem] font-semibold text-verde-oscuro no-underline hover:border-salvia"
+              >
+                {p.nombre} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
