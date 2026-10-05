@@ -25,9 +25,10 @@
   --font-titulo: var(--font-manrope), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mano: var(--font-caveat), "Segoe Script", "Comic Sans MS", cursive;
 
-  /* Cortes de pantalla del prototipo: menú hamburguesa hasta 760px, hero en una columna hasta 900px */
+  /* Cortes de pantalla: menú hamburguesa hasta 760px (como el prototipo). El hero pasa a dos columnas
+     (texto + chat al costado, como en el diseño) desde 700px, así el chat queda a la derecha en pantallas medianas. */
   --breakpoint-menu: 761px;
-  --breakpoint-hero: 901px;
+  --breakpoint-hero: 700px;
 
   --radius-tarjeta: 16px;
   --shadow-suave: 0 1px 2px rgba(31, 61, 43, 0.05), 0 8px 24px rgba(31, 61, 43, 0.06);

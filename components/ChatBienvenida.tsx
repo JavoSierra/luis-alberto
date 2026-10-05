@@ -34,19 +34,18 @@ export default function ChatBienvenida() {
         </div>
       </div>
 
-      <div className="flex items-center gap-2.5 px-3.5 py-3">
-        <div className="relative min-w-0 flex-1">
-          <input
-            type="text"
-            disabled
-            placeholder="Pegá una oferta..."
-            aria-label="Link de la oferta (próximamente)"
-            className="w-full min-w-0 cursor-not-allowed rounded-full border border-borde bg-white py-2.5 pr-[118px] pl-4 text-[.9rem]"
-          />
-          <span className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-aviso-bg px-2.5 py-1 text-[.72rem] font-bold text-aviso-tx">
-            Próximamente
-          </span>
-        </div>
+      {/* Cartel "Próximamente" arriba del campo, para que no tape el texto en pantallas angostas */}
+      <div className="flex justify-center pt-3">
+        <span className="rounded-full bg-aviso-bg px-2.5 py-1 text-[.72rem] font-bold text-aviso-tx">Próximamente</span>
+      </div>
+      <div className="flex items-center gap-2.5 px-3.5 pt-2 pb-3">
+        <input
+          type="text"
+          disabled
+          placeholder="Pegá una oferta..."
+          aria-label="Link de la oferta (próximamente)"
+          className="min-w-0 flex-1 cursor-not-allowed rounded-full border border-borde bg-white px-4 py-2.5 text-[.9rem]"
+        />
         <button
           type="button"
           disabled

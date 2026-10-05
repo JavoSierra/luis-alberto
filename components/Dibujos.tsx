@@ -44,12 +44,12 @@ export function Hojas() {
   );
 }
 
-/** Taza con texto, al lado del chat. Solo en pantallas grandes. */
+/** Taza con texto, al lado del chat. Solo en pantallas grandes (desde 1024px). */
 export function Taza() {
   return (
     <div
       aria-hidden="true"
-      className="absolute -right-1.5 -bottom-[34px] z-[2] hidden h-[92px] w-[86px] rounded-[8px_8px_18px_18px] pt-[26px] pl-3 text-[.66rem] leading-[1.3] font-bold text-verde-oscuro shadow-suave hero:block"
+      className="absolute -right-1.5 -bottom-[34px] z-[2] hidden h-[92px] w-[86px] rounded-[8px_8px_18px_18px] pt-[26px] pl-3 text-[.66rem] leading-[1.3] font-bold text-verde-oscuro shadow-suave lg:block"
       style={{ background: "linear-gradient(90deg,#fff,#eef1ec)" }}
     >
       Trabajo
