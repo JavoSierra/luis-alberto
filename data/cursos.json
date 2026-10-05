@@ -1,12 +1,41 @@
 {
   "titulo": "Cursos gratuitos",
   "descripcion": "Aprendé nuevas habilidades con recursos de calidad.",
-  "boton": "Ver cursos",
   "links": [
-    { "nombre": "freeCodeCamp", "url": "https://www.freecodecamp.org/espanol/", "detalle": "Programación desde cero, en español" },
-    { "nombre": "edX", "url": "https://www.edx.org/", "detalle": "Cursos de universidades, gratis sin certificado" },
-    { "nombre": "Khan Academy", "url": "https://es.khanacademy.org/", "detalle": "Matemática, computación y más" },
-    { "nombre": "Grow with Google", "url": "https://grow.google/intl/es/", "detalle": "Herramientas digitales y habilidades para el trabajo" },
-    { "nombre": "Microsoft Learn", "url": "https://learn.microsoft.com/es-es/training/", "detalle": "Capacitación en tecnología, en español" }
+    {
+      "nombre": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/espanol/",
+      "detalle": "Programación desde cero, en español"
+    },
+    {
+      "nombre": "Claseflix",
+      "url": "https://claseflix.io/",
+      "detalle": "Cursos online gratuitos, en español"
+    },
+    {
+      "nombre": "edX",
+      "url": "https://www.edx.org/",
+      "detalle": "Cursos de universidades, gratis sin certificado"
+    },
+    {
+      "nombre": "Khan Academy",
+      "url": "https://es.khanacademy.org/",
+      "detalle": "Matemática, computación y más"
+    },
+    {
+      "nombre": "Grow with Google",
+      "url": "https://grow.google/intl/es/",
+      "detalle": "Herramientas digitales y habilidades para el trabajo"
+    },
+    {
+      "nombre": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/es-es/training/",
+      "detalle": "Capacitación en tecnología, en español"
+    },
+    {
+      "nombre": "Capacítate para el empleo",
+      "url": "https://capacitateparaelempleo.org/",
+      "detalle": "Cursos gratis para oficios y empleos"
+    }
   ]
 }

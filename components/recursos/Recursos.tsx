@@ -1,9 +1,11 @@
-// Sección "Recursos gratuitos": tres tarjetas con links que se editan en /data (ver data/LEEME.md).
+// Sección "Recursos gratuitos": buscador de cursos + tres tarjetas con links.
+// Todo se edita en /data (ver data/LEEME.md).
 
 import cursos from "@/data/cursos.json";
 import cv from "@/data/cv.json";
 import ingles from "@/data/ingles.json";
 import { PilaLibros } from "@/components/Dibujos";
+import BuscadorCursos from "./BuscadorCursos";
 import Nota from "@/components/Nota";
 import TarjetaRecurso from "./TarjetaRecurso";
 
@@ -20,6 +22,7 @@ export default function Recursos() {
           <h2 className="text-[clamp(1.6rem,4vw,2rem)] font-extrabold">Recursos gratuitos</h2>
           <p className="mt-0.5 text-gris">Herramientas y contenido para potenciar tu búsqueda.</p>
         </div>
+        <BuscadorCursos />
         <div className="grid grid-cols-1 items-start gap-4 min-[1001px]:grid-cols-[repeat(3,1fr)_220px]">
           <TarjetaRecurso recurso={cursos} icono={ICONO_LIBRO} />
           <TarjetaRecurso recurso={ingles} icono={ICONO_BIRRETE} />

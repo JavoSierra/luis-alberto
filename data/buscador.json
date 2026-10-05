@@ -1,0 +1,11 @@
+{
+  "sugerencias": ["Excel", "Inglés", "Atención al cliente", "Marketing digital", "Programación", "Ventas", "Análisis de datos", "Diseño gráfico"],
+  "plataformas": [
+    { "nombre": "YouTube", "url": "https://www.youtube.com/results?search_query=curso+gratis+{q}", "detalle": "Videos y cursos completos" },
+    { "nombre": "Claseflix", "url": "https://claseflix.io/buscar?s={q}", "detalle": "Cursos online gratuitos, en español" },
+    { "nombre": "Khan Academy", "url": "https://es.khanacademy.org/search?page_search_query={q}", "detalle": "Clases gratis, en español" },
+    { "nombre": "edX", "url": "https://www.edx.org/search?q={q}", "detalle": "Cursos de universidades (gratis sin certificado)" },
+    { "nombre": "freeCodeCamp", "url": "https://www.freecodecamp.org/espanol/news/search/?query={q}", "detalle": "Guías de tecnología, en español" },
+    { "nombre": "Google", "url": "https://www.google.com/search?q=curso+gratis+{q}", "detalle": "Más resultados en toda la web" }
+  ]
+}

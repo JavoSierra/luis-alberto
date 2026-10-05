@@ -120,6 +120,7 @@ Vive en el chat del hero (no en una sección aparte). Es un muro de links con es
 - Proyecto movido fuera de OneDrive a `C:\Users\Javo\Proyectos\LuisAlberto`. Next.js 16 + Tailwind 4 + TypeScript. Colores en `app/globals.css` (@theme).
 - Decidido 5/10/2026: el muro real se hace en el orden previsto (después del deploy), con revisión previa de cada publicación.
 - Recursos (5/10/2026): links verificados uno por uno. El de Canva del prototipo daba 404 → reemplazado por `/es_ar/crear/curriculum-vitae/`. Se sumaron Grow with Google y Microsoft Learn. British Council no respondió desde acá: quedó afuera. Cómo editar: `data/LEEME.md`.
+- Recursos (5/10/2026, pedido del dueño): links siempre visibles (sin botón para desplegar) y buscador de cursos arriba (`components/recursos/BuscadorCursos.tsx`): arma links de búsqueda a YouTube, Claseflix (`claseflix.io/buscar?s=`), Khan Academy, edX, freeCodeCamp y Google. Sin API ni claves. Plataformas y sugerencias en `data/buscador.json`. Sumados Claseflix y Capacítate para el empleo a Cursos.
 - LinkedIn y GitHub: completar en `lib/config.ts` (REDES). Mientras estén vacíos, los botones no aparecen.
 - Foto del autor en `public/images/foto.webp` (5/10/2026): se usa en el chat del hero y en Sobre. LinkedIn cargado en `lib/config.ts`.
 - Imágenes pendientes en `/public/images`: plantas, taza, libros (hoy son dibujos SVG en `components/Dibujos.tsx`).
