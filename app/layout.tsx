@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Caveat, Manrope } from "next/font/google";
 import { SITIO } from "@/lib/config";
 import "./globals.css";
@@ -41,7 +42,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es" className={`${manrope.variable} ${caveat.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Estadísticas de visitas de Vercel: sin cookies y sin datos personales. Solo funciona ya publicada. */}
+        <Analytics />
+      </body>
     </html>
   );
 }
