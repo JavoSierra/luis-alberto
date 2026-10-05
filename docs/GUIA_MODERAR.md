@@ -3,7 +3,14 @@
 Cada link que alguien comparte en el chat entra **"pendiente"** y no lo ve nadie más
 hasta que lo aprobás. Tarda hasta 1 minuto en aparecer en la página después de aprobarlo.
 
-## Dónde se ven
+## La forma fácil: tu panel de control
+
+Abrí **https://luisalberto-git-main-javiersierra09-1633.vercel.app/admin**
+(si te pide, iniciá sesión en Vercel con "Continue with Google").
+Ahí ves las ofertas "Por revisar" con botones **Aprobar**, **Rechazar** y **Borrar**.
+Guardalo en favoritos del navegador.
+
+## La otra forma: desde Vercel
 
 1. Entrá a https://vercel.com con **"Continue with Google"**.
 2. Arriba, tocá **Storage** (o entrá a tu proyecto `luisalberto` → pestaña **Storage**).
